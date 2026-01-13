@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://kit.fontawesome.com/0f2cec8968.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <h1>Little <span id="text-color">Cal</span></h1>
+    <div id="div-1">
+        <div id="input0">
+            <input id="input1" value="" type="number">
+            <input id="input2" value="" type="number">
+        </div>
+        <div id="div-2">
+            <div id="div-3">
+                <button id="btn1" onclick="plus()">+</button>
+                <button id="btn2" onclick="multiply()">x</button>
+                <button id="btn3" onclick="minus()">-</button>
+                <button id="btn4" onclick="divide()">/</button>
+                <button id="btn5" onclick="refresh()"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+
+            </div>
+            <p id="pTag"></p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    let styleBody = document.getElementById('body')
+    let styleDiv1 = document.getElementById('div-1')
+    let input1 = document.getElementById('input1')
+    let input2 = document.getElementById('input2')
+    let inputDiv = document.getElementById('input0')
+    let styleBlue = document.getElementById('text-color')
+    let styleDiv2 = document.getElementById('div-2')
+    let styleDiv3 = document.getElementById('div-3')
+    let buttonOne = document.getElementById('btn1')
+    let buttonTwo = document.getElementById('btn2')
+    let buttonThree = document.getElementById('btn3')
+    let buttonFour = document.getElementById('btn4')
+    let result = document.getElementById('pTag')
+    let reload = document.getElementById('btn5')
+
+
+    styleBody.style.backgroundColor = 'crimson'
+    styleBody.style.width = '100%'
+    styleBody.style.height = '100%'
+    styleBody.style.display = 'flex'
+    styleBody.style.flexDirection = 'column'
+    styleBody.style.justifyContent = 'center'
+    styleBody.style.alignItems = 'center'
+    styleBody.style.margin = '0'
+    styleBody.style.padding = '0'
+    styleBody.style.boxSizing = 'border-box'
+
+    styleDiv1.style.backgroundColor = 'white'
+    styleDiv1.style.width = '300px'
+    styleDiv1.style.height = '300px'
+    styleDiv1.style.borderRadius = '15px'
+    styleDiv1.style.display = 'flex'
+    styleDiv1.style.flexDirection = 'column'
+    styleDiv1.style.alignItems = 'center'
+    styleDiv1.style.justifyContent = 'center'
+    styleDiv1.style.padding = '30px'
+
+
+    styleBlue.style.color = 'blue'
+
+    input1.style.width = '120px'
+    input1.style.height = '40px'
+
+    input2.style.width = '120px'
+    input2.style.height = '40px'
+
+    inputDiv.style.width = '100%'
+    inputDiv.style.display = 'flex'
+    inputDiv.style.justifyContent = 'center'
+
+
+    styleDiv2.style.display = 'flex'
+    styleDiv2.style.gap = '15px'
+
+    styleDiv3.style.display = 'flex'
+    styleDiv3.style.flexDirection = 'column'
+    styleDiv3.style.gap = '5px'
+    styleDiv3.style.marginTop = '16px'
+
+
+    buttonOne.style.width = '45px'
+    buttonOne.style.height = '45px'
+
+    buttonTwo.style.width = '45px'
+    buttonTwo.style.height = '45px'
+
+    buttonThree.style.width = '45px'
+    buttonThree.style.height = '45px'
+
+    buttonFour.style.width = '45px'
+    buttonFour.style.height = '45px'
+
+
+
+
+
+
+    result.style.backgroundColor = 'lightgrey'
+    result.style.width = '200px'
+    result.style.height = '195px'
+    result.style.display = 'flex'
+    result.style.alignItems = 'center'
+    result.style.justifyContent = 'center'
+    result.style.textAlign = 'center'
+
+
+
+    function plus() {
+        let answer1 = +input1.value;
+        let answer2 = +input2.value;
+        let finalAnswer = answer1 + answer2
+
+        result.innerHTML = finalAnswer
+    }
+
+    function multiply() {
+        let answer1 = +input1.value;
+        let answer2 = +input2.value;
+        let finalAnswer = answer1 * answer2
+
+        result.innerHTML = finalAnswer
+    }
+
+    function minus() {
+        let answer1 = +input1.value;
+        let answer2 = +input2.value;
+        let finalAnswer = answer1 - answer2
+
+        result.innerHTML = finalAnswer
+    }
+
+    function divide() {
+        let answer1 = +input1.value;
+        let answer2 = +input2.value;
+        let finalAnswer = answer1 / answer2
+
+        result.innerHTML = finalAnswer
+    }
+
+    function refresh() {
+        input1.value = ''
+        input2.value = ''
+        result.innerHTML = ''
+    }
+
+
+
+
+</script>
