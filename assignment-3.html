@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>LENGTH AND BREADTH OF A RECTANGLE</h1>
+   <div>
+    <h5>Calculate Here</h5>
+     <input id="inputOne" type="number" placeholder="length"> 
+    <input id="inputTwo" type="number" placeholder="breadth">
+    <button id="btnTag" onclick="getPerimeter()">Click here</button>
+    <p id="textContext"></p>
+   </div>
+</body>
+</html>
+<script>
+    let inputTag1 = document.getElementById('inputOne')
+    let inputTag2 = document.getElementById('inputTwo')
+    let resultText = document.getElementById('textContext')
+    function getPerimeter() {
+        let length = Number(inputTag1.value)
+        let breadth = Number(inputTag2.value)
+        let perimeter = (length + breadth) * 2;
+        let finalResult = `The perimeter of a rectangle with length ${length} and breadth ${breadth} is ${perimeter}`
+        
+        resultText.innerHTML = finalResult
+
+        
+    }
+
+</script>
