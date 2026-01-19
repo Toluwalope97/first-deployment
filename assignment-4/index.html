@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <p id="pTag">Pick a number from 1 - 10</p>
+        <input type="text" id="inputTag">
+        <button id="btn" onclick="clickHere()">Guess</button> 
+    </div>
+</body>
+
+</html>
+<script>
+    let inputTagOne = document.getElementById('inputTag')
+    let display = document.getElementById('pTag')
+    let bgColor = document.getElementById('container')
+
+    function clickHere() {
+        const number = Math.ceil(Math.random() * 10);
+        let input = +inputTagOne.value
+        // console.log(`Random number is ${number}`);
+
+        if (input > 10) {
+            console.log(`please input a number between 1 to 10`);
+            let User = 'please input a number between 1 to 10'
+            display.style.backgroundColor = 'red'
+            display.style.color = 'white'
+            display.innerHTML = User
+        } else if (input === number) {
+            console.log(`The guess is correct`);
+            let User = `Correct Answer ${number}, You WON! 🎉🎉`
+                display.style.backgroundColor = 'green'
+                display.style.color = 'white'
+                display.style.border = '1px solid white'
+                bgColor.style.backgroundColor = 'green'
+            display.innerHTML = User
+        }
+        else {
+            console.log(`You are wrong, the answer is ${number}`);
+            let User = `You are wrong, the answer is ${number}`
+            // display.style.backgroundColor = 'red'
+            // display.style.color = 'white'
+            display.innerHTML = User
+        }
+
+    }
+
+
+</script>
