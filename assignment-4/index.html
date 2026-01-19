@@ -25,16 +25,16 @@
     function clickHere() {
         const number = Math.ceil(Math.random() * 10);
         let input = +inputTagOne.value
-        // console.log(`Random number is ${number}`);
+        
 
         if (input > 10) {
-            console.log(`please input a number between 1 to 10`);
+           
             let User = 'please input a number between 1 to 10'
             display.style.backgroundColor = 'red'
             display.style.color = 'white'
             display.innerHTML = User
         } else if (input === number) {
-            console.log(`The guess is correct`);
+            
             let User = `Correct Answer ${number}, You WON! 🎉🎉`
                 display.style.backgroundColor = 'green'
                 display.style.color = 'white'
@@ -43,10 +43,7 @@
             display.innerHTML = User
         }
         else {
-            console.log(`You are wrong, the answer is ${number}`);
             let User = `You are wrong, the answer is ${number}`
-            // display.style.backgroundColor = 'red'
-            // display.style.color = 'white'
             display.innerHTML = User
         }
 
