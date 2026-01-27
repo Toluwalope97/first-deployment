@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputElement">
+    <button onclick="checkSeason()">Check Weather</button>
+</body>
+</html>
+<script>
+let input = document.getElementById('inputElement')
+    
+    function checkSeason() {
+        let season = input.value.trim().toLowerCase()
+        switch (season) {
+            case '':
+                alert('please input a valid Month')
+                break;
+            case 'september':
+            case 'october':
+            case 'november':
+                alert(`${season} is Autumn`)
+                break;
+            case 'january':
+            case 'february':
+            case 'december':
+                alert('The season is Winter')
+                break;
+            case 'march':
+            case 'april':
+            case 'may':
+                alert('The season is Spring')
+                break;
+            case 'june':
+            case 'july':
+            case 'august':
+                alert('The season is Summer')
+                break;
+        
+            default:
+                alert('please input a valid month')
+                break;
+        }
+    }
+</script>
