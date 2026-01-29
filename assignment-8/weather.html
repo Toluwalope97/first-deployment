@@ -15,6 +15,9 @@ let input = document.getElementById('inputElement')
     
     function checkSeason() {
         let season = input.value.trim().toLowerCase()
+        let image = [
+            'https://img.freepik.com/free-vector/flat-background-winter-season-with-snowman-house_23-2150933048.jpg'
+        ]
         switch (season) {
             case '':
                 alert('please input a valid Month')
@@ -27,7 +30,8 @@ let input = document.getElementById('inputElement')
             case 'january':
             case 'february':
             case 'december':
-                alert('The season is Winter')
+                // alert('The season is Winter')
+                body.style.backgroundImage = `url(${image})`
                 break;
             case 'march':
             case 'april':

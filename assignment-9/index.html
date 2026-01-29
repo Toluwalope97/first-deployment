@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+    <body>
+        <button id="backButton" onclick="showPreviousImage()">Previous</button>
+        <div class="image-size" id="divElement">
+        </div>
+        <button id="nextButton" onclick="showNextImage()">Next</button>
+    </body>
+
+</html>
+    <script>
+        let divTag = document.getElementById('divElement')
+        let NextBtn = document.getElementById('nextButton')
+        let PreviousBtn = document.getElementById('backButton')
+
+        
+
+        let pictures = [
+            'https://fastly.picsum.photos/id/693/200/300.jpg?hmac=mVvEbAr0g-bdhrVxrz7IorqUfEy95C2hPkIT9Vm3nn8',
+            'https://fastly.picsum.photos/id/860/200/300.jpg?hmac=IABW-3mXBCuVP5aHuuuC7WpE3w1TpQZS9PZYr4mf7Gk',
+            'https://fastly.picsum.photos/id/83/200/300.jpg?hmac=avqtE9ZSAkPbFtYCXzxg4TeAA-fMWqX6jUQeWI_HjLc',
+            'https://fastly.picsum.photos/id/215/200/300.jpg?hmac=Nt1epjkKo-29FLbrKGINDjceT_uNiqOG_pah7r52Wss',
+            'https://fastly.picsum.photos/id/101/200/300.jpg?hmac=xUDvORQTxaML0fp9wnx4y6LIHvc7M-tNcOJz8rDLRXo',
+            'https://fastly.picsum.photos/id/324/200/300.jpg?hmac=FV2xXKimSV4_6MgoF29au1Ml3DwqV98U6R1BSmuXXrk'
+        ]
+      
+
+        function backgroundImage() {
+            divTag.style.backgroundImage = `url(${pictures[currentIndex]})`;
+        }
+
+        let currentIndex = 0
+
+         backgroundImage()
+
+
+        function showNextImage() {
+            currentIndex++;
+            if ( currentIndex >= pictures.length ) {
+                currentIndex = 0;
+
+            }
+             divTag.style.backgroundImage = `url(${pictures[currentIndex]})`;
+        }
+
+        function showPreviousImage() {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = pictures.length -1;
+            }
+             divTag.style.backgroundImage = `url(${pictures[currentIndex]})`;
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let isBackgroundImageShowing = true 
+        // function showNextImage() {
+        //     if ( isBackgroundImageShowing === true) {
+        //       divTag.style.backgroundImage = `url(${pictures[1]})`
+        //       console.log('Hello');
+        //       isBackgroundImageShowing = false;
+        //     } else if(isBackgroundImageShowing === false) {
+        //         divTag.style.backgroundImage = `url(${pictures[2]})`
+        //       console.log('hey');
+        //       isBackgroundImageShowing = true
+        //     } else if( isBackgroundImageShowing === true){
+        //         divTag.style.backgroundImage = `url(${pictures[3]})`
+        //       console.log('YO');
+        //     }
+        // }
+
+
+    </script>

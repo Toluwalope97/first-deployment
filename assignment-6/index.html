@@ -39,13 +39,10 @@
             userResult.innerHTML = `Please input your weight`
         } else if (!height) {
             userResult.innerHTML = `Please input your height`
-            if (isNaN(weight)) {
+            if (isNaN(weight) || isNaN(height)) {
                 userResult.innerHTML = `Please input a number`
-            }
-            if (isNaN(height)) {
-                userResult.innerHTML = `Please input a number`
-            }
         }
+        
         else if (finalResult <= 18.5) {
             userResult.innerHTML = `Underweight: BMI is ${finalResult.toFixed(1)}`
         }

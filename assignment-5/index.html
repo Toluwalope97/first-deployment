@@ -25,29 +25,29 @@
 
 
     function checkHere() {
-        const excellent = 80
+        // const excellent = 80
 
 
         let inputElement = +input.value
 
 
-        if (inputElement > 100) {
+        if (inputElement > 100 || inputElement == "") {
             let User = 'please input a number between 1 to 100'
             showResult.innerHTML = User
 
         }
-        else if (inputElement >= excellent) {
+        else if (inputElement <= 100 && inputElement >= 80) {
             let User = 'Your grade is A, EXCELLENT!'
             showResult.innerHTML = User
-        } else if (inputElement >= 70) {
+        } else if (inputElement <= 79 && inputElement >= 70) {
             let User = 'Your grade is B, KEEP IT UP!'
             showResult.innerHTML = User
         }
-        else if (inputElement >= 60) {
+        else if (inputElement <= 69 && inputElement >= 60) {
             let User = 'Your grade is C, YOU CAN DO MORE!'
             showResult.innerHTML = User
         }
-        else if (inputElement >= 50) {
+        else if (inputElement <= 59 && inputElement >= 50) {
             let User = 'Your grade is D, Not the best DO BETTER!'
             showResult.innerHTML = User
         }

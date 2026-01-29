@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: space-around;
+           
+        }
+        #roundOne{
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+           
+        }
+        #roundThree{
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+        #clickHere{
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+   <div id="roundOne">
+     <button id="clickHere" onclick="checkRandomColor1()">Color checker</button>
+   </div>
+   <div id="roundTwo">
+     <button id="clickHere" onclick="checkRandomColor2()">Color checker</button>
+   </div>
+   <div id="roundThree">
+     <button id="clickHere" onclick="checkRandomColor3()">Color checker</button>
+   </div>
+</body>
+</html>
+<script>
+   
+    function checkRandomColor1() {
+        let circleOne = document.getElementById('roundOne')
+        randomColorR = Math.floor(Math.random() * 256)
+        randomColorG = Math.floor(Math.random() * 256)
+        randomColorB = Math.floor(Math.random() * 256)
+        
+        circleOne.style.backgroundColor = `rgba(${randomColorB}, ${randomColorG}, ${randomColorR})`
+    }
+    function checkRandomColor2() {
+        randomColorR = Math.floor(Math.random() * 256)
+        randomColorG = Math.floor(Math.random() * 256)
+        randomColorB = Math.floor(Math.random() * 256)
+      
+         document.body.style.backgroundColor = `rgba(${randomColorB}, ${randomColorG}, ${randomColorR})`
+    }
+    function checkRandomColor3() {
+         let circleThree = document.getElementById('roundThree')
+        randomColorR = Math.floor(Math.random() * 256)
+        randomColorG = Math.floor(Math.random() * 256)
+        randomColorB = Math.floor(Math.random() * 256)
+        
+        circleThree.style.backgroundColor = `rgba(${randomColorB}, ${randomColorG}, ${randomColorR})`
+    }
+
+
+
+
+</script>
